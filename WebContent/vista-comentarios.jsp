@@ -18,15 +18,12 @@
 <body>
 	<!-- Contenido -->
 	<div class="container" id="contenedor-principal">
-		<h2>Vista-Carrito</h2>
+		<h2>Comentarios</h2>
 		<ul>
-			<c:forEach var="par" items="${paresCarrito}">
+			<c:forEach var="par" items="${comentarios}">
 				<tr>
 					<li>${par.key}-${par.value}</li>
-					<a 
-					href="borrarCarrito?producto=<c:out value="${par.key}"/>"
-					class="btn btn-default"> <c:out value="eliminar" />
-					</a>
+					
 				</tr>
 			</c:forEach>
 		</ul>		

@@ -29,6 +29,10 @@
 			<li><a href="incluirEnCarrito">Carrito</a></li>
 			<li><a href="login.jsp">Login</a></li>
 			<li><a href="admin.jsp">Administrar productos</a></li>
+			<li><a href="productos">Ver todos los productos</a></li>
+
+
+
 		</ul>
 		<div class="nav navbar-right">
 			<div class="center-block">
@@ -40,7 +44,7 @@
 		</div>
 	</nav>
 
-	<!-- Contenido -->
+	<!-- Contenido 
 	<div class="container" id="contenedor-principal">
 		<h2>Productos</h2>
 		<div class="row ">
@@ -64,7 +68,7 @@
 				</div>
 			</c:forEach>
 
-		</div>
+		</div>-->
 
 	</div>
 
