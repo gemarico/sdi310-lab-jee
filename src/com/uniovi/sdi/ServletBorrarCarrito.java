@@ -7,7 +7,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class ServletBorrarCarrito
@@ -21,7 +20,6 @@ public class ServletBorrarCarrito extends HttpServlet {
 	 */
 	public ServletBorrarCarrito() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	/**
@@ -30,8 +28,8 @@ public class ServletBorrarCarrito extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		HttpSession session = request.getSession();
-
+		// HttpSession session = request.getSession();
+		@SuppressWarnings("unchecked")
 		HashMap<String, Integer> carrito = (HashMap<String, Integer>) request.getSession().getAttribute("carrito");
 
 		if (carrito != null) {
@@ -52,7 +50,6 @@ public class ServletBorrarCarrito extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
 

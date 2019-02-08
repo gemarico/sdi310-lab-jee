@@ -22,12 +22,15 @@
 		<ul>
 			<c:forEach var="producto" items="${productos}">
 				<tr>
-					<li>${producto.imagen}--${producto.nombre}</li>
-					<a
+
+					<td><img src=${producto.imagen } /></td>
+					<td>${producto.nombre}</td>
+
+					<td><a
 						href="incluirEnCarrito?producto=<c:out value="${producto.nombre}"/>"
 						class="btn btn-default"> <c:out value="${producto.precio}" />
-						€
-					</a>
+							€
+					</a></td>
 				</tr>
 			</c:forEach>
 		</ul>

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
+<%@ page language="java" import="com.uniovi.sdi.*"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
@@ -16,16 +17,37 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
+	
+	
+	
 	<!-- Contenido -->
 	<div class="container" id="contenedor-principal">
 		<h2>Comentarios</h2>
+		<h2>Deja tu comentario</h2>
+		<form class="form-horizontal" method="post" action="comentarios">
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="nombre">Nombre:</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" name="nombre"
+						required="true" />
 
-		<c:forEach var="c" items="${comentarios}">
-
-			<p>
-				<b>${c.nombre}: </b><i>${c.cuerpo} </i>
-			</p>
-		</c:forEach>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="cuerpo">Comentario
+					</label>
+				<div class="col-sm-10">
+					<input type="text"  class="form-control" name="cuerpo"
+						required="true" />
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button type="submit" class="btn btn-primary">Enviar</button>
+				</div>
+			</div>
+		</form>
 
 	</div>
 </body>
